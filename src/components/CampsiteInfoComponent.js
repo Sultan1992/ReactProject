@@ -1,6 +1,5 @@
 import React, { Component } from 'react';
 import { Card, CardImg, CardText, CardBody, CardTitle } from 'reactstrap';
-import Container from 'reactstrap/lib/Container';
 
 class CampsiteInfo extends Component {
    
@@ -28,12 +27,12 @@ class CampsiteInfo extends Component {
         if(comments){
             return(
                 <div className="col-md-5 m-1">
-                <h4>Comments</h4>
+                <h4 className="comments">Comments</h4>
                 {comments.map(comment=>{
                     return (
                         <div key={comment.id }>
                         <p>{comment.text} <br/>
-                        {comment.auther},
+                        {comment.author}<br/>
                         {new Intl.DateTimeFormat('en-US', { year: 'numeric',
                          month: 'short',
                          day: '2-digit'}).format(new Date(Date.parse(comment.date)))}
