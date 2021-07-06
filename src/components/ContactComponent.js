@@ -8,7 +8,7 @@ import { Control, LocalForm ,Errors} from 'react-redux-form';
 
 
 
-//
+//set redux validation
 
 const required = val => val && val.length;
 const maxLength = len => val => !val || (val.length <= len);
@@ -69,7 +69,8 @@ class Contact extends Component
     render()
     {
 
-    return (
+        return (
+
         <div className="container">
             <div className="row">
             <div className="col">
